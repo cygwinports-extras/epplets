@@ -1,0 +1,4 @@
+category: X11
+requires: cygwin e16 libGL1 libX11_6 libXext6 libimlib2
+sdesc: "Enlightenment E16 applets"
+ldesc: "Desktop	applets	for the	Enlightenment DR16 window manager"
