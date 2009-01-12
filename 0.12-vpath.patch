@@ -1,0 +1,31 @@
+--- origsrc/epplets-0.12/epplets/Makefile.am	2009-01-01 14:43:10.000000000 -0600
++++ src/epplets-0.12/epplets/Makefile.am	2009-01-11 16:21:17.140250000 -0600
+@@ -282,22 +282,22 @@ EXTRA_DIST = ${ICONS} ${ABOUT_DOCS} ${DA
+ install-data-hook:
+ 	$(mkinstalldirs) $(DESTDIR)$(edatadir)/epplet_icons
+ 	$(mkinstalldirs) $(DESTDIR)$(edatadir)/epplet_data
+-	@for i in `echo $(bin_PROGRAMS) | sed 's/\.epplet//g'`; do \
+-	  if test -d $${i}-data ; then \
++	@for i in `echo $(bin_PROGRAMS) | sed "s/\.epplet$(EXEEXT)//g"`; do \
++	  if test -d $(srcdir)/$${i}-data ; then \
+ 	    echo $(mkinstalldirs) $(DESTDIR)$(edatadir)/epplet_data/$$i ; \
+ 	    $(mkinstalldirs) $(DESTDIR)$(edatadir)/epplet_data/$$i ; \
+-	    data=`echo $$i-data/*`;\
++	    data=`echo $(srcdir)/$$i-data/*`;\
+ 	    echo $(INSTALL_DATA) $$data $(DESTDIR)$(edatadir)/epplet_data/$$i/ ; \
+ 	    $(INSTALL_DATA) $$data $(DESTDIR)$(edatadir)/epplet_data/$$i/ ; \
+ 	  fi ; \
+-	  if test -d $${i}.ABOUT ; then \
++	  if test -d $(srcdir)/$${i}.ABOUT ; then \
+ 	    echo $(mkinstalldirs) $(DESTDIR)$(edatadir)/epplet_data/$$i/ABOUT ; \
+ 	    $(mkinstalldirs) $(DESTDIR)$(edatadir)/epplet_data/$$i/ABOUT ; \
+-	    ABOUT=`echo $$i.ABOUT/*`;\
++	    ABOUT=`echo $(srcdir)/$$i.ABOUT/*`;\
+ 	    echo $(INSTALL_DATA) $$ABOUT $(DESTDIR)$(edatadir)/epplet_data/$$i/ABOUT/ ; \
+ 	    $(INSTALL_DATA) $$ABOUT $(DESTDIR)$(edatadir)/epplet_data/$$i/ABOUT/ ; \
+ 	  fi ; \
+-	  if test -f icons/$${i}.icon ; then \
++	  if test -f $(srcdir)/icons/$${i}.icon ; then \
+ 	    echo $(INSTALL_DATA) $(srcdir)/icons/$${i}.icon $(DESTDIR)$(edatadir)/epplet_icons/ ; \
+ 	    $(INSTALL_DATA) $(srcdir)/icons/$${i}.icon $(DESTDIR)$(edatadir)/epplet_icons/ ; \
+ 	  fi ; \
