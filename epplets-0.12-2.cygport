@@ -12,7 +12,7 @@ epplets_CONTENTS="usr/bin/*.exe usr/share/"
 libepplet3_CONTENTS="usr/bin/*-3.dll"
 libepplet_devel_CONTENTS="usr/include/ usr/lib/"
 
-DIFF_EXCLUDES="m4"
+#DIFF_EXCLUDES="m4"
 
 CYGCONF_ARGS="
 	--enable-esd
