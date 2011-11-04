@@ -1,5 +1,5 @@
 category: X11
-requires: libgcc1 libGL1 libImlib2_1 libX11_6 libXext6
+requires: libGL1 libImlib2_1 libX11_6 libXext6
 external-source: epplets
 sdesc: "Enlightenment E16 applet library (runtime)"
 ldesc: "Desktop	applets	for the	Enlightenment DR16 window manager"

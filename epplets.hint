@@ -1,4 +1,4 @@
 category: X11
-requires: e16 libepplet3 libesd0 libgcc1 libGL1 libX11_6
+requires: e16 libepplet3 libGL1 libX11_6
 sdesc: "Enlightenment E16 applets"
 ldesc: "Desktop	applets	for the	Enlightenment DR16 window manager"
