@@ -14,7 +14,6 @@ libepplet_devel_CONTENTS="usr/include/ usr/lib/"
 
 CYGCONF_ARGS="
 	--enable-glx
-	--disable-esd
 	--disable-cdaudio
 	--disable-static
 	LIBGTOP_CONFIG=no
