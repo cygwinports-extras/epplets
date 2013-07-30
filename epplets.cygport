@@ -1,4 +1,9 @@
-DESCRIPTION="Enlightenment E16 applets"
+NAME="epplets"
+VERSION=0.13
+RELEASE=2
+CATEGORY="X11"
+SUMMARY="Enlightenment E16 applets"
+DESCRIPTION="Desktop applets for the Enlightenment DR16 window manager."
 HOMEPAGE="http://enlightenment.org/"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 PATCH_URI="
@@ -7,14 +12,16 @@ PATCH_URI="
 	0.12-vpath.patch
 "
 
-PKG_NAMES="${PN} libepplet3 libepplet-devel"
+PKG_NAMES="${NAME} libepplet3 libepplet-devel"
 epplets_CONTENTS="usr/bin/*.exe usr/share/"
+libepplet3_CATEGORY="Libs"
+libepplet3_SUMMARY="${SUMMARY%s} library"
 libepplet3_CONTENTS="usr/bin/*-3.dll"
+libepplet_devel_SUMMARY="${SUMMARY%s} library"
 libepplet_devel_CONTENTS="usr/include/ usr/lib/"
 
 CYGCONF_ARGS="
 	--enable-glx
 	--disable-cdaudio
-	--disable-static
 	LIBGTOP_CONFIG=no
 "

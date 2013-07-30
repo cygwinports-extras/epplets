@@ -1,5 +1,0 @@
-category: X11
-requires: libepplet3 libGL-devel libX11-devel libXext-devel libImlib2-devel
-external-source: epplets
-sdesc: "Enlightenment E16 applet library (development)"
-ldesc: "Desktop	applets	for the	Enlightenment DR16 window manager"
